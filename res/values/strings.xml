@@ -1,0 +1,10 @@
+<resources>
+
+	<string name="app_name">Kadecot Plug-in Sample</string>
+    <string name="activity_name">Sample Settings</string>
+    
+    <!-- Preference -->
+    <string name="info_key">info</string>
+    <string name="info_summary">Version 1.0</string>
+	<string name="info_title">About Sample Plug-in</string>
+</resources>
