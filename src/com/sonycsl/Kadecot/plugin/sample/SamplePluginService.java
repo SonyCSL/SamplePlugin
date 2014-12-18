@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2013-2014 Sony Computer Science Laboratories, Inc. All Rights Reserved.
+ * Copyright (C) 2014 Sony Corporation. All Rights Reserved.
+ */
 
 package com.sonycsl.Kadecot.plugin.sample;
 
@@ -34,6 +38,7 @@ public class SamplePluginService extends Service {
     private static final int WEBSOCKET_PORT = 41314;
 
     private static final String EXTRA_ACCEPTED_ORIGIN = "acceptedOrigin";
+    private static final String EXTRA_ACCEPTED_TOKEN = "acceptedToken";
 
     private ProviderAccessObject mPao;
 
@@ -121,11 +126,14 @@ public class SamplePluginService extends Service {
         if (intent != null && intent.hasExtra(EXTRA_ACCEPTED_ORIGIN)) {
             origin = intent.getStringExtra(EXTRA_ACCEPTED_ORIGIN);
         }
-
+        String token = "";
+        if (intent.hasExtra(EXTRA_ACCEPTED_TOKEN)) {
+            token = intent.getStringExtra(EXTRA_ACCEPTED_TOKEN);
+        }
         /**
          * Open Web socket transport.
          */
-        mTransport.open(LOCALHOST, WEBSOCKET_PORT, origin);
+        mTransport.open(LOCALHOST, WEBSOCKET_PORT, origin, token);
         /**
          * Send HELLO message to open WAMP session. <br>
          */
