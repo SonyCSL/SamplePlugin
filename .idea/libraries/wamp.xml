@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="wamp">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/wamp.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

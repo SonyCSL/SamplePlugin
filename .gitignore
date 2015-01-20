@@ -3,4 +3,7 @@ app/build/
 
 .gradle/
 
+.idea/workspace.xml
+.idea/libraries/
+
 local.properties
