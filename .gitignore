@@ -1,9 +1,8 @@
-build/
-app/build/
-
 .gradle/
-
-.idea/workspace.xml
-.idea/libraries/
-
 local.properties
+build/
+app/app.iml
+app/build
+
+
+
